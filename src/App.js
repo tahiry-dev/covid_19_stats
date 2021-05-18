@@ -1,9 +1,11 @@
+import StatsPage from './containers/WorldwideStats';
 import './App.css';
+
 
 function App() {
   return (
     <div>
-      <h1>Hello Covid_stats, feature branch</h1>
+      <StatsPage />
     </div>
   );
 }

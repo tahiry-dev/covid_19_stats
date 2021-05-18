@@ -5,7 +5,7 @@ const initialState = {
 };
 
 
-export const wordStatsReducer = (state = intialState, { type, payload }) => {
+export const wordStatsReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case ActionTypes.SET_WORLD_STATS:
             return { ...state, stats: payload };
