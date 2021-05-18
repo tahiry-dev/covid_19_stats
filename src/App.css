@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: rgba(253, 83, 148, 0.089);
+  }
+  
+  .container {
+    display: inline-block;
+    width: 50%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+

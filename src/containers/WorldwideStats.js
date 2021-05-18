@@ -6,7 +6,6 @@ import StatsComponent from './StatsComponent';
 
 const StatsPage = () => {
     const stats = useSelector(state => state.wordStats.stats);
-    console.log('stats is', stats)
     const dispatch = useDispatch();
     const fetchStats = async () => {
         const response = await axios
