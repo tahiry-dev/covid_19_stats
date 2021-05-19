@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setWorldStats } from "../redux/actions/statsActions";
 import StatsComponent from './StatsComponent';
 
 const StatsPage = () => {
-    const stats = useSelector(state => state.wordStats.stats);
     const dispatch = useDispatch();
     const fetchStats = async () => {
         const response = await axios

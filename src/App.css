@@ -11,7 +11,7 @@
     background-color: rgba(253, 83, 148, 0.089);
   }
   
-  .container {
+  .myContainer {
     display: inline-block;
     width: 50%;
     padding-left: 5%;
@@ -19,3 +19,12 @@
     padding-bottom: 5%;
   }
 
+  .accordion {
+    padding-top: 13%;
+    width: 80%;
+  }
+  
+  .image{
+    border: 1px solid rgb(53, 52, 52);
+    border-radius: 5px;
+  }

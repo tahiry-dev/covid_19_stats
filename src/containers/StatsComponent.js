@@ -2,14 +2,17 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import uuid from 'react-uuid'
+import { Accordion, Button, Card } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 
 const StatsComponent = () => {
     const stats = useSelector(state => state.wordStats.stats);
     const renderList = stats.map((stat) => {
-        const { continent, todayDeaths, todayCases, todayRecovered } = stat;
+        const { continent, todayDeaths, todayCases, todayRecovered, countries } = stat;
         return (
-            <div className="container" key={uuid()}>
+            <div className="myContainer" key={uuid()}>
                 <div className="ui items">
                     <div className="item">
                         <div className="image">
@@ -45,16 +48,28 @@ const StatsComponent = () => {
                                     </div>
                                 </div>
                             </div>
+                            <Accordion className="accordion">
+                                <Card>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                                        Stats by country in {continent}
+                                    </Accordion.Toggle>
+
+                                    <Accordion.Collapse eventKey="0">
+                                        <Card.Body>
+                                            {countries.map((value, index) => {
+                                                return (
+                                                    <div className="ui list">
+                                                        <div className="item">
+                                                            <FontAwesomeIcon icon={faChevronRight} /> {value}
+                                                        </div>
+                                                    </div>
+                                                )
+                                            })}
+                                        </Card.Body>
+                                    </Accordion.Collapse>
+                                </Card>
+                            </Accordion>
                         </div>
-                    </div>
-                </div>
-                <div className="ui accordion">
-                    <div class="title">
-                        <i class="dropdown icon"></i>
-                              Stats by country
-                         </div>
-                    <div class="content">
-                        <p class="transition hidden">TEST</p>
                     </div>
                 </div>
             </div>
