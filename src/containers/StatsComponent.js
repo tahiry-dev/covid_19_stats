@@ -60,7 +60,7 @@ const StatsComponent = () => {
                                                 return (
                                                     <div className="ui list" key={index}>
                                                         <div className="item">
-                                                            <Link to={`/stat/${index}`}><FontAwesomeIcon icon={faChevronRight} /> {value}</Link>
+                                                            <Link to={`/stat/${value}`}><FontAwesomeIcon icon={faChevronRight} /> {value}</Link>
                                                         </div>
                                                     </div>
                                                 )

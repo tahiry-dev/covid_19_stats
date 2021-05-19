@@ -11,7 +11,7 @@ function App() {
       <h1>CORONA VIRUS DISEASE 19 (COVID-19) STATISTICS</h1>
       <Switch>
         <Route path="/" exact component={StatsPage} />
-        <Route path="/stat/:statIndex" component={StatsDetails} />
+        <Route path="/stat/:country" component={StatsDetails} />
         <Route>404 Not Found!</Route>
       </Switch>
     </Router>

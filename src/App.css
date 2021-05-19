@@ -29,5 +29,34 @@
     padding-top: 13%;
     width: 80%;
   }
-  
+
+  h3 {
+    color: green;
+    padding-top: 5%;
+  }
+
+  h2 {
+    padding-top: 7%;
+    padding-bottom: 3%;
+  }
  
+  .loading, .details {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .theStats {
+    display: block;
+    width: 28%;
+    padding-top: 20px;  
+  }
+
+  em {
+    color: violet;
+  }
+
+  .homeLink {
+    display: block;
+    margin: 10% auto;
+  }
