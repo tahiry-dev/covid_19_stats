@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import uuid from 'react-uuid'
 import { Accordion, Button, Card } from 'react-bootstrap';
@@ -58,9 +58,9 @@ const StatsComponent = () => {
                                         <Card.Body>
                                             {countries.map((value, index) => {
                                                 return (
-                                                    <div className="ui list">
+                                                    <div className="ui list" key={index}>
                                                         <div className="item">
-                                                            <FontAwesomeIcon icon={faChevronRight} /> {value}
+                                                            <Link to={`/stat/${index}`}><FontAwesomeIcon icon={faChevronRight} /> {value}</Link>
                                                         </div>
                                                     </div>
                                                 )
