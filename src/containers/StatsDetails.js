@@ -28,14 +28,14 @@ const StatsDetails = () => {
         };
     }, [country]);
     return (
-        <div className="ui grid container">
+        <div className="ui grid container" data-testid="custom-element">
             {Object.keys(statsByCountry).length === 0 ? (
                 <div className="loading">
                     <h3>...Loading</h3>
                 </div>
             ) : (
                 <div className="details">
-                    <h2>Today in <em>{country}</em></h2>
+                    <h3>Today in <em>{country}</em></h3>
                     <div className="ui statistics">
                         <div className=" orange statistic theStats">
                             <div className="value">
