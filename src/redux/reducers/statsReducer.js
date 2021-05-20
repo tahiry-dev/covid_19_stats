@@ -1,4 +1,4 @@
-import { ActionTypes } from '../constants/action-types';
+import { SET_WORLD_STATS, SELECT_COUNTRY_STATS, REMOVE_SELECTED_COUNTRY } from '../constants/action-types';
 
 const initialState = {
   stats: [],
@@ -6,7 +6,7 @@ const initialState = {
 
 export const wordStatsReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case ActionTypes.SET_WORLD_STATS:
+    case SET_WORLD_STATS:
       return { ...state, stats: payload };
     default:
       return state;
@@ -15,9 +15,9 @@ export const wordStatsReducer = (state = initialState, { type, payload }) => {
 
 export const selectedCountryReducer = (state = {}, { type, payload }) => {
   switch (type) {
-    case ActionTypes.SELECT_COUNTRY_STATS:
+    case SELECT_COUNTRY_STATS:
       return { ...state, ...payload };
-    case ActionTypes.REMOVE_SELECTED_STATS:
+    case REMOVE_SELECTED_COUNTRY:
       return {};
     default:
       return state;

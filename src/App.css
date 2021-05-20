@@ -1,62 +1,59 @@
 *,
 *::before,
 *::after {
-    font-family: "Roboto", sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    background-color: rgba(253, 83, 148, 0.089);
-  }
+body {
+  background-color: rgba(253, 83, 148, 0.089);
+}
 
-  h1 {
-    color: #007bff;
-    text-align: center;
-    padding-top: 30px;
-  }
-  
-  .myContainer {
-    display: inline-block;
-    width: 50%;
-    padding-left: 3.5%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-  }
+h1 {
+  color: #007bff;
+  text-align: center;
+  padding-top: 30px;
+}
 
-  .accordion {
-    padding-top: 13%;
-    width: 80%;
-  }
+.myContainer {
+  display: inline-block;
+  width: 50%;
+  padding-left: 3.5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 
-  h3 {
-    color: green;
-    padding-top: 5%;
-  }
+.accordion {
+  padding-top: 13%;
+  width: 80%;
+}
 
-  h3 {
-    padding-top: 5%;
-    padding-bottom: 3%;
-  }
- 
-  .loading, .details {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
+h3 {
+  color: green;
+  padding-top: 5%;
+  padding-bottom: 3%;
+}
 
-  .theStats {
-    display: block;
-    width: 28%;
-    padding-top: 20px;  
-  }
+.loading,
+.details {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 
-  em {
-    color: violet;
-  }
+.theStats {
+  display: block;
+  width: 28%;
+  padding-top: 20px;
+}
 
-  .homeLink {
-    display: block;
-    margin: 10% auto;
-  }
+em {
+  color: violet;
+}
+
+.homeLink {
+  display: block;
+  margin: 10% auto;
+}
