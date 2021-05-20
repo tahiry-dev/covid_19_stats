@@ -30,7 +30,7 @@ To get a local copy up and running follow these simple steps:
 - Open your terminal and Navigate to the directory where you will like to install the repo by running 
 ```cd FOLDER-NAME ```
 - Clone the repository as follow
-```git clone https://github.com/tahiry-dev/bookstore.git```
+```git clone git@github.com:tahiry-dev/covid_19_stats.git```
 - Run the following commands one by one: ``` npm install``` and
 ``` npm start```
 - The last command will open your default browser with the App
