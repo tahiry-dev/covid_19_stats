@@ -2,58 +2,43 @@
 
 # Project Name
 
-> One paragraph statement about the project.
+> This Application returns the statistics about COVID-19 in the world.
+on the home page, visitors will be presented with the Stats by continent.
+But it is possible to fetch details by country with a simple click!
 
-![screenshot](./app_screenshot.png)
+![screenshot](./)
 
-Additional description about the project and its features.
+This project is a capstone at Microverse under the theme "Catalogue of Statistics".
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- React
+- Redux
+- Axios
+- NOVELCOVID Api
 
 ## Live Demo
 
 [Live Demo Link](https://livedemo.com)
 
 
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+## Getting Start
+To get a local copy up and running follow these simple steps:
+- Open your terminal and Navigate to the directory where you will like to install the repo by running 
+```cd FOLDER-NAME ```
+- Clone the repository as follow
+```git clone https://github.com/tahiry-dev/bookstore.git```
+- Run the following commands one by one: ``` npm install``` and
+``` npm start```
+- The last command will open your default browser with the App
 
 ## Authors
 
-👤 **Author1**
+👤 **RANDRIAMIARINTSOA Tahiry**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+- GitHub: [@tahiry-dev](https://github.com/tahiry-dev)
+- Twitter: [@tahiry](https://twitter.com/Tahiry94825074)
+- LinkedIn: [RANDRIAMIARINTSOA](https://www.linkedin.com/in/tahiry-randriamiarintsoa/)
 
 ## 🤝 Contributing
 
@@ -67,9 +52,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Nelson Sakwa on Behance for design inspiration
+- Microverse for code review
 
 ## 📝 License
 
