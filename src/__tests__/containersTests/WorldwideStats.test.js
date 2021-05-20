@@ -1,12 +1,12 @@
 import React from 'react';
-import { render, cleanup } from "@testing-library/react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
-import '@testing-library/jest-dom/extend-expect';
 import { Provider } from 'react-redux';
+import { render } from '@testing-library/react';
+import axios from 'axios'
 import store from '../../redux/store';
+import { rest } from 'msw';
+import { setupServer } from 'msw/node';
 import StatsPage from '../../containers/WorldwideStats';
-
-afterEach(cleanup);
 
 it("it displays other component", async () => {
     render(<Provider store={store}>
@@ -17,3 +17,30 @@ it("it displays other component", async () => {
         </Router>
     </Provider>);
 });
+
+const server = setupServer(
+    rest.get("/v2/continents", (req, res, ctx) => {
+        const query = req.url.searchParams
+        const yesterday = query.get("yesterday")
+        const sort = query.get("sort")
+    })
+)
+
+beforeAll(() => server.listen());
+afterAll(() => server.close());
+afterEach(() => server.resetHandlers());
+
+const fetchStats = async () => {
+    const response = await axios
+        .get("https://corona.lmao.ninja/v2/continents?yesterday=true&sort")
+        .catch((err) => {
+            console.log("Err: ", err);
+        });
+};
+
+it('fetches the fake api call by returning undefined', async () => {
+
+    const continent = await fetchStats();
+    expect(continent).toEqual(undefined);
+
+})
