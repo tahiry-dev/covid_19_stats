@@ -6,7 +6,47 @@ Array [
     CORONA VIRUS DISEASE 19 (COVID-19) STATISTICS
   </h1>,
   <div>
-    <div />
+    <div
+      className="container"
+    >
+      <form
+        className="continent_form"
+        onChange={[Function]}
+      >
+        <div
+          className="form-group"
+        >
+          <select
+            className="custom-select"
+          >
+            <option>
+              Please Choose Your Continent
+            </option>
+            <option>
+              Asia
+            </option>
+            <option>
+              North America
+            </option>
+            <option>
+              South America
+            </option>
+            <option>
+              Europe
+            </option>
+            <option>
+              Africa
+            </option>
+            <option>
+              Australia-Oceania
+            </option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div
+      className="myContainer continent_container"
+    />
   </div>,
 ]
 `;

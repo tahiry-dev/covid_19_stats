@@ -19,12 +19,12 @@ it('it displays other component', async () => {
     </Provider>,
   );
 });
-/* eslint-disable no-unused-vars */
+
 const server = setupServer(
-  rest.get('/v2/continents', (req, res, ctx) => {
+  rest.get('/v2/continents', (req, res) => {
     const query = req.url.searchParams;
     const yesterday = query.get('yesterday');
-    const sort = query.get('sort');
+
   }),
 );
 
@@ -37,7 +37,6 @@ const fetchStats = async () => {
     .get('https://corona.lmao.ninja/v2/continents?yesterday=true&sort')
     .catch((err) => err);
 };
-/* eslint-enable no-unused-vars */
 
 it('fetches the fake api call by returning undefined', async () => {
   const continent = await fetchStats();
