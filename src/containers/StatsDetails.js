@@ -11,7 +11,6 @@ const StatsDetails = () => {
   const { country } = useParams();
   const statsByCountry = useSelector((state) => state.countryStats);
   const { todayDeaths, todayCases, todayRecovered } = statsByCountry;
-  console.log("ito ary", todayDeaths);
   const dispatch = useDispatch();
   const fetchStatsDetail = async (country) => {
     const response = await axios

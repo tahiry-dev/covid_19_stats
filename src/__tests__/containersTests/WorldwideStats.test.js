@@ -21,11 +21,7 @@ it('it displays other component', async () => {
 });
 
 const server = setupServer(
-  rest.get('/v2/continents', (req, res) => {
-    const query = req.url.searchParams;
-    const yesterday = query.get('yesterday');
-
-  }),
+  rest.get('/v2/continents'),
 );
 
 beforeAll(() => server.listen());
@@ -33,9 +29,8 @@ afterAll(() => server.close());
 afterEach(() => server.resetHandlers());
 
 const fetchStats = async () => {
-  const response = await axios
-    .get('https://corona.lmao.ninja/v2/continents?yesterday=true&sort')
-    .catch((err) => err);
+  await axios
+    .get('https://corona.lmao.ninja/v2/continents?yesterday=true&sort');
 };
 
 it('fetches the fake api call by returning undefined', async () => {
