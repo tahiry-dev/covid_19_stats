@@ -11,6 +11,7 @@ const StatsDetails = () => {
   const { country } = useParams();
   const statsByCountry = useSelector((state) => state.countryStats);
   const { todayDeaths, todayCases, todayRecovered } = statsByCountry;
+  console.log("ito ary", todayDeaths);
   const dispatch = useDispatch();
   const fetchStatsDetail = async (country) => {
     const response = await axios
@@ -26,7 +27,7 @@ const StatsDetails = () => {
     };
   }, [country]);
   return (
-    <div className="ui grid container">
+    <div className="ui grid container" data-testid="custom-element">
       {Object.keys(statsByCountry).length === 0 ? (
         <div className="loading">
           <h3>...Loading</h3>

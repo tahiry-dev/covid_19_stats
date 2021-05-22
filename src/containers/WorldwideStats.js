@@ -1,25 +1,89 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
-import { setWorldStats } from '../redux/actions/statsActions';
-import StatsComponent from './StatsComponent';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectCountryStats } from '../redux/actions/statsActions';
+import ContinentFilter from './ContinentFilter';
+import CountryLists from './CountryLists';
+
+
 
 const StatsPage = () => {
+
+
+  const [continent, setContinent] = useState('');
+
+  const handleContinent = (childData) => {
+    setContinent(childData)
+  }
+
+  const statsByContinent = useSelector((state) => state.countryStats);
+
+  const { todayDeaths, todayCases, todayRecovered } = statsByContinent;
+
   const dispatch = useDispatch();
-  const fetchStats = async () => {
+  const fetchContinentStats = async (continent) => {
     const response = await axios
-      .get('https://corona.lmao.ninja/v2/continents?yesterday=true&sort')
+      .get(`https://corona.lmao.ninja/v2/continents/${continent}?yesterday&strict`)
       .catch((err) => err);
-    dispatch(setWorldStats(response.data));
+
+    dispatch(selectCountryStats(response.data));
   };
 
   useEffect(() => {
-    fetchStats();
-  }, []);
+    if (continent && continent !== '') fetchContinentStats(continent);
+  }, [continent]);
 
   return (
     <div>
-      <StatsComponent />
+      <ContinentFilter chosenContinent={handleContinent} />
+      <div className="myContainer continent_container">
+        {Object.keys(statsByContinent).length === 0 || continent === "Please Choose Your Continent" ? (<></>) :
+          (<div className="ui items ">
+            <div className="item">
+              <div className="image">
+                {/* eslint-disable import/no-dynamic-require */}
+                {continent === "Please Choose Your Continent" || continent === "" ? (<></>) : (<img src={require(`../images/${continent}.jpg`).default} alt={continent} />)}
+                {/* eslint-enable import/no-dynamic-require */}
+              </div>
+              <div className="content">
+                <h2>
+                  {continent}
+                  {' '}
+                Today Stats
+                </h2>
+                <div className="ui mini statistics">
+                  <div className="orange statistic">
+                    <div className="value">
+                      {todayCases}
+                    </div>
+                    <div className="label">
+                      Cases
+                  </div>
+                  </div>
+
+                  <div className="red statistic">
+                    <div className="value">
+                      {todayDeaths}
+                    </div>
+                    <div className="label">
+                      Deaths
+                    </div>
+                  </div>
+
+                  <div className="green statistic">
+                    <div className="value">
+                      {todayRecovered}
+                    </div>
+                    <div className="label">
+                      Recovered
+                    </div>
+                  </div>
+                </div>
+                <CountryLists continent={continent} />
+              </div>
+            </div>
+          </div>)}
+      </div>
     </div>
   );
 };

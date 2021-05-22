@@ -57,3 +57,21 @@ em {
   display: block;
   margin: 10% auto;
 }
+
+.continent_container {
+ display: block; 
+ margin: 0 auto;
+
+}
+
+.continent_form {
+  display: block;
+  width: 50%;
+  margin: 7% auto; 
+}
+
+.continent_label {
+  display: block;
+  text-align: center;
+}
+

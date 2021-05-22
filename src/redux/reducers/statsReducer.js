@@ -1,4 +1,6 @@
-import { SET_WORLD_STATS, SELECT_COUNTRY_STATS, REMOVE_SELECTED_COUNTRY } from '../constants/action-types';
+import {
+  SET_WORLD_STATS, SELECT_COUNTRY_STATS, REMOVE_SELECTED_COUNTRY, FILTER_CONTINENT,
+} from '../constants/action-types';
 
 const initialState = {
   stats: [],
@@ -21,5 +23,14 @@ export const selectedCountryReducer = (state = {}, { type, payload }) => {
       return {};
     default:
       return state;
+  }
+};
+
+export const filterContinentReducer = (state = {}, { type, payload }) => {
+  switch (type) {
+    case FILTER_CONTINENT:
+      return { ...state, ...payload };
+    default:
+      return {};
   }
 };
