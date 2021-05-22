@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Covid19 Stats
 
 > This Application returns the statistics about COVID-19 in the world.
 on the home page, visitors will be presented with the Stats by continent.
