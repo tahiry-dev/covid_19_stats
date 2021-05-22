@@ -29,11 +29,11 @@ const ContinentFilter = ({ chosenContinent }) => {
 };
 
 ContinentFilter.propTypes = {
-  chosenContinent: propTypes.string,
+  chosenContinent: propTypes.func,
 };
 
 ContinentFilter.defaultProps = {
-  chosenContinent: ' ',
+  chosenContinent: propTypes.func,
 };
 
 export default ContinentFilter;

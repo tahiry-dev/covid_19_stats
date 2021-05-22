@@ -35,6 +35,15 @@ To get a local copy up and running follow these simple steps:
 ``` npm start```
 - The last command will open your default browser with the App
 
+## Tests
+
+It is very easy to test the application, just follow the following steps:
+- Open your terminal and Navigate to the directory where you will like to install the repo by running 
+```cd FOLDER-NAME ```
+- Run the following command:
+``` npm test```
+
+
 ## Authors
 
 👤 **RANDRIAMIARINTSOA Tahiry**
