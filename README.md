@@ -6,7 +6,7 @@
 on the home page, visitors will be presented with the Stats by continent.
 But it is possible to fetch details by country with a simple click!
 
-![screenshot](https://user-images.githubusercontent.com/47100064/118940319-42ddeb80-b959-11eb-8306-bd58605fe949.png)
+![screenshot](https://user-images.githubusercontent.com/47100064/119225345-e969ee00-bb0b-11eb-8296-fa0ad78816c6.png)
 ![screenshot](https://user-images.githubusercontent.com/47100064/118940446-64d76e00-b959-11eb-9670-622c8ec653f5.png)
 ![screenshot](https://user-images.githubusercontent.com/47100064/118940509-7751a780-b959-11eb-9933-11b6e32c4055.png)
 
